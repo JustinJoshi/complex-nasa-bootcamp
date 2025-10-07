@@ -15,11 +15,11 @@
   - Anything specific on which you want feedback!
 
 Example:
-```
+
 I completed the challenge: 5
 I feel good about my code: 4
 I'm not sure if my constructors are setup cleanly...
-```
+
 
 Nasa into weather API
 
@@ -27,11 +27,13 @@ This api grabs all the nasa facilities and their location, and feeds that info i
 
 Tech used: HTML, CSS, JavaScript, Framework of choice
 
-i used a proxy url site to grab the info from the nasa api to avoid the cors request issue. i used a fetch request to fetch the data, then fed that data into another fetch request to then print all the required data into the dom with innerhtml
+On page load, a fetch request instantly runs. The URL I used for my fetch request required that I have a cors proxy website in front of it. The api would otherwise run into a cors error. The fetch runs and grabs the list of over 400 nasa facilities. I setup a forEach loop to loop through the large array, and from each of the objects grab the facility name, latitude and longitude. I then setup another fetch request with the open weather api that takes in the latitude and longitude and returns the temperature. Then i put the temperature, facility name, and coordinates into the dom.
+
+
 
 Optimizations
 
-make it prettier maybe
+I would make it stylized for sure. I would consider adding some features to make the first nasa api project intrgrate with this one.
 
 Lessons Learned:
 
